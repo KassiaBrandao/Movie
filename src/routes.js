@@ -3,17 +3,17 @@ import Home from './pages/Home/home';
 import Layout from './components/layout/layout';
 import Search from './pages/Search/search';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
-import SeriesDetails from './pages/SeriesDetails/SeriesDetails';
+
 
 function RoutesApp(){
     return(
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/home' element={<Home />} />
                     <Route path="/movie/:id" element={<MovieDetails />} /> 
-                    <Route path="/series/:id" element={<SeriesDetails />} />  
-                    <Route path='/search' element={<Search />} />
+                    
+                    <Route path='/' element={<Search />} />
                 </Routes>
             </Layout> 
         </BrowserRouter>

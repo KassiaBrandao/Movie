@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate  } from 'react-router-dom';
 import { StarFilled } from '@ant-design/icons';
 import './MovieDetails.css';
+import {LeftOutlined} from "@ant-design/icons"
 
 const API_KEY = '17797770';
 const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 function MovieDetails() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -53,11 +55,18 @@ function MovieDetails() {
         setSelectedSeason(event.target.value);
     };
 
+    const handleBackClick = () => {
+      navigate(-1);  
+  };
+
     if (loading) return <div>Carregando...</div>;
     if (error) return <div>{error}</div>;
 
     return (
         <div className='main-container'>
+            <LeftOutlined onClick={handleBackClick} className="back-button">
+              Voltar
+            </LeftOutlined>
             {movie && (
                 <div className="details-container">
                     <div className="image-and-seasons">
@@ -77,30 +86,29 @@ function MovieDetails() {
                     </div>
 
                     <div className="movie-info">
-                      
-                      <div className='title-movie'>
-                      <h1 className='h1-movie'>{movie.Title}</h1>
-                      <div className="dates">
-                          <span>{movie.Year}</span>
-                          {movie.EndYear && <span>- {movie.EndYear}</span>}
-                      </div>
-                      <div className="rating">
-                          <StarFilled className="fa fa-star" /> {movie.imdbRating}
-                      </div>
-                      </div>
-                      <div className='coutry-movie'>
-                      <p className='p-country'>{movie.Country}</p>
-                      </div>
-                      <div className='runtime-movie'>
-                      <p className='p-runtime'>{movie.Runtime}</p>
-                      </div>
-                      <p className='p-movie'>{movie.Plot}</p>
-                      <div className="actors">
-                          Actors: {movie.Actors}
-                      </div>
-                      <div className="writers">
-                          Diretores: {movie.Writer}
-                      </div>
+                        <div className='title-movie'>
+                            <h1 className='h1-movie'>{movie.Title}</h1>
+                            <div className="dates">
+                                <span>{movie.Year}</span>
+                                {movie.EndYear && <span>- {movie.EndYear}</span>}
+                            </div>
+                            <div className="rating">
+                                <StarFilled className="fa fa-star" /> {movie.imdbRating}
+                            </div>
+                        </div>
+                        <div className='coutry-movie'>
+                            <p className='p-country'>{movie.Country}</p>
+                        </div>
+                        <div className='runtime-movie'>
+                            <p className='p-runtime'>{movie.Runtime}</p>
+                        </div>
+                        <p className='p-movie'>{movie.Plot}</p>
+                        <div className="actors">
+                            Actors: {movie.Actors}
+                        </div>
+                        <div className="writers">
+                            Diretores: {movie.Writer}
+                        </div>
                     </div>
                 </div>
             )}

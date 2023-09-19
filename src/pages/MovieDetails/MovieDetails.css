@@ -25,9 +25,9 @@
 }
 
 .movie-info {
-    display: flex;          /* Define que o conteúdo é exibido em coluna */
-    flex-direction: column; /* Configura a direção como coluna */
-    gap: 5px;              /* Espaçamento entre os itens */
+    display: flex;          
+    flex-direction: column; 
+    gap: 5px;              
 }
 
 .rating {
@@ -41,7 +41,7 @@
     margin-top: -40px;
     color: #cdcdcd;
 }
-/* Se você quiser personalizar ainda mais o espaçamento entre os itens, você pode fazer isso individualmente: */
+
 .coutry-movie,  .dates, .p-movie, .actors, .writers {
     color: #cdcdcd;
     font-size: 20px;
@@ -120,6 +120,28 @@ select {
     
 }
 
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    background-color: #c5c5c5;
+    border: 1px solid #e0e0e0;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px 10px;
+    height: 25px;
+    width: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+
+}
+
+.back-button:hover {
+    background-color: #b0b0b0;
+    transform: scale(1.05);
+}
+
 @media (max-width: 1280px) {
     .main-container {
         margin-left: 10%;  
@@ -140,6 +162,9 @@ select {
         flex-direction: column;
         gap: 10px;
         width: 100%;
+        display: flex;           
+        justify-content: center; 
+        align-items: center;     
     }
 
     .h1-movie {
@@ -167,6 +192,7 @@ select {
 
     .img-movie {
         width: 90%;
+        margin: auto; 
     }
 
     .seasons-dropdown {
@@ -174,16 +200,52 @@ select {
     }
 
     .episode-container {
-        flex-direction: column;
+        flex-direction: row; 
         align-items: center;
+        justify-content: flex-start; 
+        gap: 15px;
     }
 
     .episode-poster {
         width: 80px;
+        margin-right: 10px;
+    }
+
+    .episode-info {
+        flex: 1;
+        padding-left: 10px;
     }
 
     .main-container {
         margin-left: 0; 
     }
+
+    .back-button {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        background-color: #c5c5c5;
+        border: 1px solid #e0e0e0;
+        color: #000;
+        border-radius: 50%;
+        padding: 5px 10px;
+        height: 25px;
+        width: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    
+    
+    }
+    
+    .back-button:hover {
+        background-color: #b0b0b0;
+        transform: scale(1.05);
+    }
 }
+
+
+
+
+
+
 
