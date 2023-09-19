@@ -1,0 +1,189 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.details-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 5%;
+    
+}
+
+.h1-movie{
+    font-size: 60px;
+    color: #fff;
+    
+}
+
+.movie-info {
+    display: flex;          /* Define que o conteúdo é exibido em coluna */
+    flex-direction: column; /* Configura a direção como coluna */
+    gap: 5px;              /* Espaçamento entre os itens */
+}
+
+.rating {
+    margin-left: 13%;
+    margin-top: -20px;
+    color: #cdcdcd;
+    
+}
+
+.runtime-movie{
+    margin-top: -40px;
+    color: #cdcdcd;
+}
+/* Se você quiser personalizar ainda mais o espaçamento entre os itens, você pode fazer isso individualmente: */
+.coutry-movie,  .dates, .p-movie, .actors, .writers {
+    color: #cdcdcd;
+    font-size: 20px;
+    width: 60%;
+    margin-top: -05px;
+}
+
+
+select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.seasons-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.image-and-seasons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+    
+}
+
+.img-movie {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.seasons-dropdown {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.temporada{
+    font-size: 25px;
+    color: #fff;
+}
+
+.episode-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.h1-ep{
+    font-size: 25px;
+    color: #fff;
+}
+
+.title-ep{
+    font-size: 25px;
+    color: #fff;
+}
+
+.episode-poster {
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.episode-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media (max-width: 1280px) {
+    .main-container {
+        margin-left: 10%;  
+    }
+}
+
+@media (max-width: 1024px) {
+    .details-container {
+        width: 90%; 
+    }
+    .main-container {
+        margin-left: 5%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .h1-movie {
+        font-size: 40px;
+    }
+
+    .dates, .rating {
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .p-movie, .temporada, .h1-ep, .title-ep {
+        font-size: 18px;
+    }
+
+    .directors {
+        font-size: 16px;
+    }
+
+    .movie-info {
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .img-movie {
+        width: 90%;
+    }
+
+    .seasons-dropdown {
+        margin-top: 10px;
+    }
+
+    .episode-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .episode-poster {
+        width: 80px;
+    }
+
+    .main-container {
+        margin-left: 0; 
+    }
+}
+

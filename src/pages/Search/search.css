@@ -1,0 +1,135 @@
+.Home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    width: 80%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.search-bar input {
+    width: 100%; 
+    padding: 10px 10px 10px 50px;
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    margin-top: 10px;
+    box-sizing: border-box; 
+    background-color: #342380;
+}
+
+.search-bar input::placeholder {
+    color: white;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; 
+    top: 60%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    z-index: 1;
+    
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; 
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 0%;
+    height: 100%;
+    width: 80%;
+   
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 1px;
+    margin-bottom: 20px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px); 
+}
+
+.img-card {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+}
+
+.card-titulo, .card-ano {
+    color: #ffffff;
+    align-self: flex-start; 
+    margin-left: 15%;
+    margin-top: -3%;
+    text-align: left; 
+}
+
+.card-titulo {
+    word-wrap: break-word;
+    max-width: 100%; 
+    overflow: hidden; 
+}
+
+.card-estrela {
+    color: #ffffff;
+    align-self: flex-end; 
+    text-align: right; 
+    margin-right: 10%;
+    margin-top: -8%;
+}
+
+
+
+.fade-in {
+    color: #ffffff;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
